@@ -30,9 +30,17 @@ form {
     cursor: not-allowed;
   }
   
+  /* New styles for the added data section */
+  div {
+    max-width: 300px; /* Reduced from 400px */
+    margin: 20px auto;
+    text-align: center;
+  }
+  
   ul {
     list-style-type: none;
     padding-left: 0;
+    text-align: left;
   }
   
   li {
@@ -45,4 +53,3 @@ form {
   h3 {
     text-align: center;
   }
-  
