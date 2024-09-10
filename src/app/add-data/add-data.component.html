@@ -7,6 +7,7 @@
     <input matInput type="datetime-local" formControlName="datetime">
     <mat-icon matSuffix>calendar_today</mat-icon>
     <mat-error *ngIf="dataForm.get('datetime')?.hasError('required')">Date and Time is required</mat-error>
+    <mat-error *ngIf="dataForm.get('datetime')?.hasError('futureDate')">Future dates are not allowed</mat-error>
   </mat-form-field>
 
   <!-- Temperature Field -->

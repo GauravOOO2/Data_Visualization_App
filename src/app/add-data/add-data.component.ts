@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { SharedDataService } from '../shared-data.service';
 
 @Component({
@@ -13,9 +13,20 @@ export class AddDataComponent {
 
   constructor(private fb: FormBuilder, private dataService: SharedDataService) {
     this.dataForm = this.fb.group({
-      datetime: ['', [Validators.required]],
+      datetime: ['', [Validators.required, this.dateNotInFutureValidator]],
       temperature: ['', [Validators.required, Validators.min(-50), Validators.max(50)]]
     });
+  }
+
+  dateNotInFutureValidator(control: AbstractControl): { [key: string]: any } | null {
+    const selectedDate = new Date(control.value);
+    const currentDate = new Date();
+    
+    if (selectedDate > currentDate) {
+      return { 'futureDate': true };
+    }
+    
+    return null;
   }
 
   onSubmit() {
