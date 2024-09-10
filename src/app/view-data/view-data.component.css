@@ -1,0 +1,29 @@
+/* src/app/view-data/view-data.component.css */
+
+/* Center the chart on the page */
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    margin-top: 20px;
+  }
+  
+  /* Customize the canvas */
+  canvas {
+    max-width: 100%;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f5f5f5;
+  }
+  
+  /* Style for the message when no data is available */
+  .no-data-message {
+    text-align: center;
+    font-size: 1.2em;
+    color: #888;
+    margin-top: 20px;
+  }
+  
+  

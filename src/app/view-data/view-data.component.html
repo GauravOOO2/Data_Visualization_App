@@ -1,0 +1,12 @@
+<!-- src/app/view-data/view-data.component.html -->
+
+<!-- No data message -->
+<div *ngIf="dataEntries.length === 0" class="no-data-message">
+  <p>No data to display. Please add data first.</p>
+</div>
+
+<!-- Chart container -->
+<div class="chart-container">
+  <canvas #tempChart></canvas>
+</div>
+
