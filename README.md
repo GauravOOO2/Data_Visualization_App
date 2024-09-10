@@ -1,27 +1,85 @@
-# DataVisualizationApp
+# Data Visualization App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+Welcome to the Data Visualization App, a powerful and intuitive Angular-based application designed to transform raw data into compelling visual representations. This project showcases the seamless integration of modern web technologies to deliver an engaging user experience in data analysis and presentation.
 
-## Development server
+## Table of Contents
+- [Features](#features)
+- [Live Demo](#live-demo)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running Locally](#running-locally)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
+- **Interactive Data Input**: Easily add temperature data with date and time stamps
+- **Real-time Chart Updates**: Visualize temperature trends as you input data
+- **Responsive Design**: Seamless experience across desktop and mobile devices
+- **Data Validation**: Ensure data integrity with built-in validation checks
+- **User-friendly Interface**: Intuitive design for effortless data management
+- **Dynamic Chart Rendering**: Utilizes Chart.js for smooth and interactive charts
 
-## Code scaffolding
+## Live Demo
+Experience the app in action: [Data Visualization App Live Demo](https://data-visualization-app-eight.vercel.app/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
+- **Frontend Framework**: Angular 15+
+- **UI Components**: Angular Material
+- **Charting Library**: Chart.js
+- **Styling**: CSS3 with responsive design principles
+- **Deployment**: Vercel for continuous deployment
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Prerequisites
+Ensure you have the following installed:
+- Node.js (v16.x or later)
+- npm (v8.x or later)
+- Angular CLI (v15.x or later)
 
-## Running unit tests
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/GauravOOO2/Data_Visualization_App.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd Data_Visualization_App
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Running Locally
+1. Start the development server:
+   ```bash
+   ng serve
+   ```
+2. Open your browser and visit `http://localhost:4200`
 
-## Running end-to-end tests
+## Usage
+1. Navigate to the "Add Data" section to input temperature data
+2. Use the date-time picker and temperature input field to add entries
+3. Switch to the "View Data" section to see your data visualized in a line chart
+4. Observe real-time updates as you add more data points
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Contributing
+We welcome contributions! Please follow these steps:
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature/YourFeature`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature/YourFeature`
+5. Submit a pull request
 
-## Further help
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Contact
+Gaurav - [GitHub Profile](https://github.com/GauravOOO2)
+
+Project Link: [https://github.com/GauravOOO2/Data_Visualization_App](https://github.com/GauravOOO2/Data_Visualization_App)
