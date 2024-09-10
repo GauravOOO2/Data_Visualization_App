@@ -47,7 +47,8 @@ export class ViewDataComponent implements OnInit, AfterViewInit {
         datasets: [{
           label: 'Temperature',
           data: this.dataEntries.map(entry => entry.temperature),
-          borderColor: 'rgb(75, 192, 192)',
+          borderColor: '#800080', // Purple color for the line
+          backgroundColor: 'rgba(128, 0, 128, 0.1)', // Light purple fill
           tension: 0.1
         }]
       },

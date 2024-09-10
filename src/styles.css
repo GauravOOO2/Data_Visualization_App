@@ -2,3 +2,47 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Purple theme for Material components */
+.mat-calendar-body-selected {
+  background-color: #800080 !important;
+  color: #ffffff !important;
+}
+
+.mat-calendar-body-today:not(.mat-calendar-body-selected) {
+  border-color: #800080 !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+  color: #800080 !important;
+}
+
+.mat-input-element {
+  caret-color: #800080 !important;
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+  color: #800080 !important;
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: #800080 !important;
+}
+
+.mat-icon {
+  color: #800080 !important;
+}
+
+.mat-raised-button {
+  background-color: #800080 !important;
+  color: #ffffff !important;
+}
+
+/* Purple styling for tabs */
+.mat-tab-group.mat-primary .mat-ink-bar {
+  background-color: #800080 !important;
+}
+
+.mat-tab-label-active {
+  color: #800080 !important;
+}

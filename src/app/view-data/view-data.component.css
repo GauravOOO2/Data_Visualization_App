@@ -14,7 +14,7 @@
   canvas {
     max-width: 100%;
     max-height: 300px; /* Added to limit the height */
-    border: 2px solid #007bff;
+    border: 2px solid #800080; /* Changed to purple */
     border-radius: 8px;
     padding: 10px;
     background-color: #f5f5f5;
@@ -24,7 +24,7 @@
   .no-data-message {
     text-align: center;
     font-size: 1.2em;
-    color: #888;
+    color: #800080; /* Changed to purple */
     margin-top: 20px;
   }
   

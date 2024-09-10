@@ -1,18 +1,19 @@
 <!-- src/app/add-data/add-data.component.html -->
 
 <form [formGroup]="dataForm" (ngSubmit)="onSubmit()">
-  <!-- Date and Time Field with Icon -->
+  <!-- Date and Time Field -->
   <mat-form-field>
-    <mat-label>Select Date and Time</mat-label>
+    <mat-label>Enter Date and Time</mat-label>
     <input matInput type="datetime-local" formControlName="datetime">
+    <mat-icon matSuffix>calendar_today</mat-icon>
     <mat-error *ngIf="dataForm.get('datetime')?.hasError('required')">Date and Time is required</mat-error>
-    <mat-error *ngIf="dataForm.get('datetime')?.hasError('futureDate')">Date and Time must be in the past</mat-error>
   </mat-form-field>
 
   <!-- Temperature Field -->
   <mat-form-field>
     <mat-label>Temperature (Celsius)</mat-label>
     <input matInput type="number" formControlName="temperature">
+    <mat-icon matSuffix>thermostat</mat-icon>
     <mat-error *ngIf="dataForm.get('temperature')?.hasError('required')">Temperature is required</mat-error>
     <mat-error *ngIf="dataForm.get('temperature')?.hasError('min')">Minimum value is -50</mat-error>
     <mat-error *ngIf="dataForm.get('temperature')?.hasError('max')">Maximum value is 50</mat-error>
