@@ -23,15 +23,19 @@ export class ViewDataComponent implements OnInit, AfterViewInit {
     // Subscribe to data from the shared service
     this.dataService.data$.subscribe(entries => {
       this.dataEntries = entries;
-      if (this.dataEntries.length > 0) {
+      if (this.chart) {
         this.updateChart();
+      } else if (this.dataEntries.length > 0) {
+        this.initChart();
       }
     });
   }
 
   ngAfterViewInit() {
     // Initialize an empty chart
-    this.initChart();
+    if (this.dataEntries.length > 0) {
+      this.initChart();
+    }
   }
 
   initChart() {
@@ -39,10 +43,10 @@ export class ViewDataComponent implements OnInit, AfterViewInit {
     const config: ChartConfiguration = {
       type: 'line',
       data: {
-        labels: [],
+        labels: this.dataEntries.map(entry => new Date(entry.datetime)),
         datasets: [{
           label: 'Temperature',
-          data: [],
+          data: this.dataEntries.map(entry => entry.temperature),
           borderColor: 'rgb(75, 192, 192)',
           tension: 0.1
         }]
@@ -66,12 +70,8 @@ export class ViewDataComponent implements OnInit, AfterViewInit {
   }
 
   updateChart() {
-    if (!this.chart) {
-      this.initChart();
-    }
-
     if (this.chart) {
-      this.chart.data.labels = this.dataEntries.map(entry => new Date(entry.datetime).toLocaleString());
+      this.chart.data.labels = this.dataEntries.map(entry => new Date(entry.datetime));
       this.chart.data.datasets[0].data = this.dataEntries.map(entry => entry.temperature);
       this.chart.update();
     }
